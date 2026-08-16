@@ -1,0 +1,426 @@
+/* =====================================
+   ResumeRAG AI - UPGRADED CHAT UI
+===================================== */
+
+/* =========================
+   APP BACKGROUND
+========================= */
+
+.stApp {
+    background: #080808 !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================
+   REMOVE STREAMLIT UI
+========================= */
+
+header[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDeployButton"],
+#MainMenu,
+footer {
+    display: none !important;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+section.main > div.block-container {
+    width: 100% !important;
+    max-width: 1400px !important;
+
+    padding-top: 20px !important;
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+    padding-bottom: 120px !important;
+
+    margin: 0 auto !important;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    width: 100% !important;
+
+    text-align: center;
+
+    font-family: "Arial Black", Impact, sans-serif;
+
+    font-size: 65px;
+    font-weight: 900;
+
+    letter-spacing: -2px;
+    line-height: 1;
+
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.red {
+    color: #c00000;
+}
+
+.white {
+    color: #ffffff;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle {
+    width: 100% !important;
+
+    text-align: center;
+
+    color: #aaaaaa;
+
+    font-size: 24px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==================================================
+   CHAT MESSAGES
+   AUTOMATIC TEXT-BASED WIDTH
+================================================== */
+
+
+/* =========================
+   AI MESSAGE - LEFT
+========================= */
+
+.ai {
+    display: table !important;
+
+    width: fit-content !important;
+    max-width: 65% !important;
+
+    margin: 20px 0 !important;
+
+    padding: 14px 18px !important;
+
+    background: #181818 !important;
+
+    border: 1px solid #333333 !important;
+
+    border-radius: 18px !important;
+
+    color: #ffffff !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.5 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================
+   USER MESSAGE - RIGHT
+========================= */
+
+.user {
+    display: table !important;
+
+    width: fit-content !important;
+    max-width: 65% !important;
+
+    margin: 20px 0 20px auto !important;
+
+    padding: 12px 18px !important;
+
+    background: #5b1b24 !important;
+
+    border: 1px solid #8c303d !important;
+
+    border-radius: 18px !important;
+
+    color: #ffffff !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.5 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================
+   CHAT INPUT AREA
+========================= */
+
+.stChatInputContainer {
+    background: #111111 !important;
+
+    border: 1px solid #333333 !important;
+
+    border-radius: 22px !important;
+
+    padding: 0 !important;
+}
+
+
+/* INPUT TEXT */
+
+.stChatInputContainer textarea {
+    background: #242424 !important;
+
+    color: #ffffff !important;
+
+    border-radius: 20px !important;
+
+    font-size: 16px !important;
+}
+
+
+/* PLACEHOLDER */
+
+.stChatInputContainer textarea::placeholder {
+    color: #999999 !important;
+}
+
+
+/* SEND BUTTON */
+
+.stChatInputContainer button {
+    background: #800000 !important;
+
+    color: #ffffff !important;
+
+    border-radius: 50% !important;
+}
+
+
+/* =========================
+   FILE UPLOADER
+========================= */
+
+[data-testid="stFileUploader"] {
+    background: transparent !important;
+
+    border: none !important;
+}
+
+[data-testid="stFileUploader"] > div {
+    display: none !important;
+}
+
+
+/* =========================
+   ATTACHMENT POPUP
+========================= */
+
+[data-testid="stPopover"] {
+    background: #151515 !important;
+
+    border-radius: 20px !important;
+
+    border: 1px solid #333333 !important;
+}
+
+
+/* SHOW UPLOADER INSIDE POPUP */
+
+[data-testid="stPopover"] [data-testid="stFileUploader"] > div {
+    display: block !important;
+}
+
+
+/* PIN BUTTON */
+
+[data-testid="stPopover"] button {
+    background: #800000 !important;
+
+    color: #ffffff !important;
+
+    border-radius: 50% !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    font-size: 20px !important;
+}
+
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+.stDownloadButton button {
+    background: #800000 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 10px !important;
+
+    padding: 8px 16px !important;
+}
+
+
+/* =========================
+   SPINNER
+========================= */
+
+[data-testid="stSpinner"] {
+    color: #ffffff !important;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #800000;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a00000;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    section.main > div.block-container {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .logo {
+        font-size: 52px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .ai {
+        max-width: 75% !important;
+    }
+
+    .user {
+        max-width: 75% !important;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+    section.main > div.block-container {
+        width: 100% !important;
+
+        max-width: none !important;
+
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-top: 10px !important;
+        padding-bottom: 100px !important;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        font-size: 40px !important;
+
+        letter-spacing: -1px;
+
+        margin-top: 10px;
+    }
+
+
+    /* SUBTITLE */
+
+    .subtitle {
+        font-size: 17px !important;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* AI MESSAGE */
+
+    .ai {
+        max-width: 85% !important;
+
+        margin: 15px 0 !important;
+
+        padding: 12px 15px !important;
+
+        font-size: 15px !important;
+    }
+
+
+    /* USER MESSAGE */
+
+    .user {
+        max-width: 85% !important;
+
+        margin: 15px 0 15px auto !important;
+
+        padding: 11px 15px !important;
+
+        font-size: 15px !important;
+    }
+
+
+    /* CHAT INPUT */
+
+    .stChatInputContainer textarea {
+        font-size: 15px !important;
+    }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 32px !important;
+    }
+
+    .subtitle {
+        font-size: 15px !important;
+    }
+
+    .ai {
+        max-width: 90% !important;
+    }
+
+    .user {
+        max-width: 90% !important;
+    }
+}
